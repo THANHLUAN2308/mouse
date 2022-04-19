@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+        }
+    </style>
+</head>
+<body>
+    <img id="myImage" src="image/ball.png" style="position: relative;top: 0px;left: 0px;" alt="ball picture">
+    <h3>Click button below to move the image to right</h3>
+    <button type="button" onclick="moveRight()">Click Me</button>
+    <script>
+        const step = 50
+        ball = document.getElementById('myImage')
+        function moveRight() {
+            if ((parseInt(ball.style.left)) < (window.innerWidth - 369-step))
+                ball.style.left = parseInt(ball.style.left) + step + 'px'
+            else
+                ball.style.left = parseInt(ball.style.left)
+        }
+    </script>
+</body>
+</html>
